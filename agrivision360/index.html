@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroVision 360 – Climate-Resilient Advisory</title>
+    <!-- Google Fonts: Nunito + Tamil, Hindi, Kannada support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- App Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Leaflet (world map) - without SRI to avoid integrity mismatches in local setups -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <!-- Chart.js CDN (for simple charts) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+    <!-- PapaParse for CSV (market data) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" defer></script>
+    <!-- App Script -->
+    <script src="./app.js" defer></script>
+</head>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-recaptcha.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBjVir37dHR_YpWfd1gZ5YKSRMj6ewhNt4",
+        authDomain: "agrovision360-91d51.firebaseapp.com",
+        projectId: "agrovision360-91d51",
+        storageBucket: "agrovision360-91d51.firebasestorage.app",
+        messagingSenderId: "608751085528",
+        appId: "1:608751085528:web:948f0d690945ff1a9834ad",
+        measurementId: "G-2HEN902ZB3"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<body>
+    <!-- Root wrapper -->
+    <div id="app-root">
+        <!-- LOGIN VIEW -->
+        <section id="login-view" class="view view--active">
+            <div class="login-card">
+                <div class="lang-switcher" id="lang-switcher">
+                    <button type="button" class="lang-btn lang-btn--active" data-lang="en"
+                        aria-label="English">English</button>
+                    <button type="button" class="lang-btn" data-lang="hi" aria-label="Hindi">हिन्दी</button>
+                    <button type="button" class="lang-btn" data-lang="ta" aria-label="Tamil">தமிழ்</button>
+                    <button type="button" class="lang-btn" data-lang="kn" aria-label="Kannada">ಕನ್ನಡ</button>
+                </div>
+                <div class="login-hero">
+                    <h1 class="app-title" data-i18n="appTitle">AgroVision 360</h1>
+                    <p class="app-tagline" data-i18n="appTagline">
+                        Climate-resilient crop advisory for every farmer, powered by AI.
+                    </p>
+                </div>
+                <form id="login-form" class="login-form" novalidate>
+                    <div class="form-group">
+                        <label for="login-phone" data-i18n="phoneLabel">Phone number</label>
+                        <input type="tel" id="login-phone" name="phone" data-i18n-placeholder="phonePlaceholder"
+                            placeholder="Enter your mobile number" autocomplete="tel" required />
+                        <small class="form-error" id="phone-error"></small>
+                    </div>
+
+                    <div class="form-group form-group--otp">
+                        <label for="login-otp" data-i18n="otpLabel">OTP</label>
+                        <div class="otp-row">
+                            <input type="text" id="login-otp" name="otp" data-i18n-placeholder="otpPlaceholder"
+                                placeholder="Enter 6-digit OTP" maxlength="6" inputmode="numeric" required />
+                            <button type="button" id="get-otp-btn" class="btn btn--secondary" data-i18n="getOtp">Get
+                                OTP</button>
+                        </div>
+                        <small class="form-error" id="otp-error"></small>
+                        <small class="otp-sent" id="otp-sent" style="display:none;"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width" data-i18n="loginBtn">
+                        Login
+                    </button>
+
+                    <p class="login-hint" data-i18n="loginHint">
+                        Demo: Enter phone, click Get OTP, then enter OTP to login. SMS alerts will be sent to this
+                        number.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- DASHBOARD VIEW -->
+        <section id="dashboard-view" class="view">
+            <!-- Layout: sidebar + main content -->
+            <aside class="sidebar">
+                <div class="sidebar__brand">
+                    <div class="sidebar__logo">🌱</div>
+                    <div>
+                        <div class="sidebar__title" data-i18n="sidebarTitle">AgroVision 360</div>
+                        <div class="sidebar__subtitle" data-i18n="sidebarSubtitle">Farmer Dashboard</div>
+                    </div>
+                </div>
+
+                <nav class="sidebar__nav">
+                    <button class="nav-item nav-item--active" data-section="overview">
+                        <span data-i18n="navDashboard">Dashboard</span>
+                    </button>
+                    <button class="nav-item" data-section="chatbot">
+                        <span data-i18n="navChatbot">AI Chatbot</span>
+                    </button>
+                </nav>
+
+                <div class="sidebar__footer">
+                    <button id="logout-btn" class="btn btn--ghost btn--full-width" data-i18n="logoutBtn">
+                        Logout
+                    </button>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main">
+                <!-- Top bar -->
+                <header class="topbar">
+                    <div>
+                        <h2 id="section-title" class="topbar__title" data-i18n="dashboardOverview">Dashboard overview
+                        </h2>
+                        <p class="topbar__subtitle">
+                            Weather-aware, market-smart, and AI-guided decisions for your fields.
+                        </p>
+                    </div>
+                    <div class="topbar__right">
+                        <div class="lang-switcher lang-switcher--dashboard" id="lang-switcher-dashboard">
+                            <button type="button" class="lang-btn lang-btn--compact" data-lang="en"
+                                aria-label="English">EN</button>
+                            <button type="button" class="lang-btn lang-btn--compact" data-lang="hi"
+                                aria-label="Hindi">हि</button>
+                            <button type="button" class="lang-btn lang-btn--compact" data-lang="ta"
+                                aria-label="Tamil">த</button>
+                            <button type="button" class="lang-btn lang-btn--compact" data-lang="kn"
+                                aria-label="Kannada">ಕ</button>
+                        </div>
+                        <div class="topbar__user">
+                            <div class="avatar">F</div>
+                            <div class="topbar__user-meta">
+                                <span class="user-name" id="farmer-name">Farmer Demo</span>
+                                <span class="user-location">Karnataka, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- OVERVIEW SECTION -->
+                <section id="section-overview" class="section section--active">
+                    <!-- High-level stats -->
+                    <div class="stats-grid">
+                        <article class="stat-card">
+                            <h3>Field Moisture</h3>
+                            <p class="stat-card__value" id="moisture-value">62%</p>
+                            <p class="stat-card__hint">Optimal for paddy this week.</p>
+                        </article>
+                        <article class="stat-card">
+                            <h3>7-Day Rain Outlook</h3>
+                            <p class="stat-card__value" id="rainfall-outlook">Medium</p>
+                            <p class="stat-card__hint">Plan irrigation on dry days.</p>
+                        </article>
+                        <article class="stat-card">
+                            <h3>Market Trend</h3>
+                            <p class="stat-card__value" id="market-trend">↑ Positive</p>
+                            <p class="stat-card__hint">Rice prices expected to rise.</p>
+                        </article>
+                    </div>
+
+                    <!-- Main grid: calendar + weather + map + chart + mini-chat -->
+                    <div class="main-grid">
+                        <!-- Calendar -->
+                        <section class="card calendar-card">
+                            <header class="card__header">
+                                <div>
+                                    <h3>Crop Calendar</h3>
+                                    <p class="card__subtitle">Plan sowing, irrigation, and harvest.</p>
+                                </div>
+                                <div class="calendar-nav">
+                                    <button type="button" id="calendar-prev" class="icon-btn"
+                                        aria-label="Previous month">‹</button>
+                                    <span class="calendar__month" id="calendar-month"></span>
+                                    <button type="button" id="calendar-next" class="icon-btn"
+                                        aria-label="Next month">›</button>
+                                </div>
+                            </header>
+                            <div class="calendar-sow-form">
+                                <label for="sow-date-input">Sow date</label>
+                                <input type="date" id="sow-date-input" aria-label="Select sowing date" />
+                                <label for="calendar-crop-select">Crop</label>
+                                <select id="calendar-crop-select" aria-label="Select crop for calendar">
+                                    <option value="paddy">Paddy (Rice)</option>
+                                    <option value="wheat">Wheat</option>
+                                    <option value="maize">Maize</option>
+                                    <option value="cotton">Cotton</option>
+                                    <option value="sugarcane">Sugarcane</option>
+                                    <option value="pulses">Pulses</option>
+                                    <option value="vegetables">Vegetables</option>
+                                </select>
+                                <button type="button" id="calendar-apply-btn"
+                                    class="btn btn--primary btn--small">Apply</button>
+                            </div>
+                            <div class="calendar">
+                                <div class="calendar__header">
+                                    <span>Sun</span>
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                </div>
+                                <div class="calendar__body" id="calendar-body"></div>
+                            </div>
+                            <ul class="calendar__legend">
+                                <li><span class="dot dot--sowing"></span>Sowing</li>
+                                <li><span class="dot dot--irrigation"></span>Irrigation</li>
+                                <li><span class="dot dot--harvest"></span>Harvest</li>
+                            </ul>
+                        </section>
+
+                        <!-- Weather -->
+                        <section class="card weather-card">
+                            <header class="card__header">
+                                <div>
+                                    <h3>Weather Insight</h3>
+                                    <p class="card__subtitle">
+                                        Dummy forecast – connect to real APIs later.
+                                    </p>
+                                </div>
+                            </header>
+                            <div class="weather-current" id="weather-current">
+                                <!-- Populated via JS -->
+                            </div>
+                            <div class="weather-forecast" id="weather-forecast">
+                                <!-- Forecast cards via JS -->
+                            </div>
+                        </section>
+
+                        <!-- World Map + crop suitability -->
+                        <section class="card map-card">
+                            <header class="card__header">
+                                <div>
+                                    <h3>Global Map & Crop Suitability</h3>
+                                    <p class="card__subtitle">
+                                        Click anywhere on the world map to see live conditions and a suggested crop.
+                                    </p>
+                                </div>
+                                <button type="button" class="icon-btn map-expand-btn"
+                                    aria-label="Toggle full-screen map">
+                                    ⤢
+                                </button>
+                            </header>
+                            <div class="map-card__content">
+                                <div class="map-card__map" id="map-view">
+                                    <span class="map-card__label" id="map-location-label">
+                                        Click on the map to pick a location
+                                    </span>
+                                </div>
+                                <div class="map-card__details">
+                                    <div class="map-card__metric">
+                                        <span>Temperature</span>
+                                        <strong id="map-temp">28°C</strong>
+                                    </div>
+                                    <div class="map-card__metric">
+                                        <span>Humidity</span>
+                                        <strong id="map-humidity">65%</strong>
+                                    </div>
+                                    <div class="map-card__metric">
+                                        <span>Rain chance (7d)</span>
+                                        <strong id="map-rain">40%</strong>
+                                    </div>
+                                    <div class="map-card__metric">
+                                        <span>Weather</span>
+                                        <strong id="map-condition">Partly cloudy</strong>
+                                    </div>
+                                    <div class="map-card__metric map-card__metric--crop">
+                                        <span>Suggested crop</span>
+                                        <strong id="map-crop">Paddy (Kharif)</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Market Prices -->
+                        <section class="card chart-card">
+                            <header class="card__header">
+                                <div>
+                                    <h3>Market Trend (Government Data)</h3>
+                                    <p class="card__subtitle">
+                                        Modal price (₹/quintal) by crop – select state and crop.
+                                    </p>
+                                </div>
+                                <div class="market-filters">
+                                    <select id="market-state-filter" class="market-filter"
+                                        aria-label="Filter by Indian state">
+                                        <option value="">All states</option>
+                                    </select>
+                                    <select id="market-crop-filter" class="market-filter" aria-label="Filter by crop">
+                                        <option value="">All crops</option>
+                                    </select>
+                                </div>
+                            </header>
+                            <canvas id="priceChart" aria-label="Crop prices from government market data"></canvas>
+                            <p class="chart-hint">
+                                Source: Government-approved market data. Select Indian state and crop to view trend.
+                            </p>
+                        </section>
+
+                        <!-- Mini Chatbot preview -->
+                        <section class="card mini-chat-card">
+                            <header class="card__header">
+                                <div>
+                                    <h3>AI Advisory Snapshot</h3>
+                                    <p class="card__subtitle">
+                                        Recent suggestions from your virtual agronomist.
+                                    </p>
+                                </div>
+                            </header>
+                            <div class="mini-chat" id="mini-chat">
+                                <div class="mini-chat__message mini-chat__message--bot">
+                                    Soil moisture is good. Avoid irrigation for 2 days.
+                                </div>
+                                <div class="mini-chat__message mini-chat__message--bot">
+                                    Likely pest risk next week. Plan preventive spray.
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- CHATBOT SECTION -->
+                <section id="section-chatbot" class="section">
+                    <div class="card chatbot-card">
+                        <header class="card__header">
+                            <div>
+                                <h3>AI Crop Advisor</h3>
+                                <p class="card__subtitle">
+                                    Ask questions about crop health, irrigation, pests, and more.
+                                </p>
+                            </div>
+                        </header>
+                        <div class="chat">
+                            <div class="chat__messages" id="chat-messages">
+                                <!-- Dummy starter conversation -->
+                                <div class="chat__bubble chat__bubble--bot">
+                                    👋 Namaste! I am your climate-smart crop assistant. How can I help you today?
+                                </div>
+                                <div class="chat__bubble chat__bubble--user">
+                                    How will the rain affect my paddy this week?
+                                </div>
+                                <div class="chat__bubble chat__bubble--bot">
+                                    Analyzing 7-day rain pattern... High rainfall is expected mid-week. Avoid fertilizer
+                                    application 24 hours before heavy rain.
+                                </div>
+                            </div>
+
+                            <form id="chat-form" class="chat__input-area" novalidate>
+                                <label class="upload-btn" for="image-upload">
+                                    📷
+                                    <input type="file" id="image-upload" accept="image/*"
+                                        aria-label="Upload crop image for analysis" />
+                                </label>
+                                <input type="text" id="chat-input" class="chat__text-input"
+                                    placeholder="Type your question in simple words..." autocomplete="off" />
+                                <button type="submit" class="btn btn--primary chat__send-btn">
+                                    Send
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+        <!-- Floating chatbot button -->
+        <button id="chat-fab" class="chat-fab" aria-label="Open chatbot">
+            💬
+        </button>
+    </div>
+</body>
+
+</html>
