@@ -987,21 +987,20 @@ document.addEventListener("DOMContentLoaded", () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    function fakeAiResponse(userText) {
-        const lower = userText.toLowerCase();
-
-        if (lower.includes("pest") || lower.includes("insect")) {
-            return "Possible pest pressure detected based on your message. Monitor leaves for spots and consider an integrated pest management spray if symptoms increase.";
-        }
-        if (lower.includes("irrigation") || lower.includes("water")) {
-            return "Soil moisture looks adequate for the next 2 days (demo data). Irrigate during early morning or late evening to reduce evaporation losses.";
-        }
-        if (lower.includes("fertilizer") || lower.includes("urea")) {
-            return "For nitrogen application, avoid spreading right before heavy rain to prevent nutrient loss. Split application into 2–3 smaller doses for better uptake.";
-        }
-
-        return "Analyzing crop health and climate patterns (demo). For now, consider checking soil moisture at 10–15 cm depth and keep an eye on upcoming rainfall.";
+    async function getAiResponse(userText) {
+    try {
+        const res = await fetch("http://localhost:8000/predict", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: userText })
+        });
+        const data = await res.json();
+        return data.response;
+    } catch (err) {
+        console.error("Error fetching AI response:", err);
+        return "Sorry, the AI is currently unavailable.";
     }
+}
 
     chatForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -1015,13 +1014,13 @@ document.addEventListener("DOMContentLoaded", () => {
         chatInput.value = "";
 
         // Simulate AI typing delay
-        setTimeout(() => {
-            appendMessage({
-                text: fakeAiResponse(message),
-                sender: "bot",
-            });
-        }, 700);
+        setTimeout(async () => {
+    const botResponse = await getAiResponse(message);
+    appendMessage({
+        text: botResponse,
+        sender: "bot",
     });
+}, 700);
 
     imageUploadInput.addEventListener("change", (e) => {
         const file = e.target.files && e.target.files[0];

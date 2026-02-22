@@ -1,0 +1,253 @@
+{
+    "grape": {
+    "bacterial rot": {
+        "Disease Description": "Affects grape berries, causing soft, water-soaked spots that may develop a foul odor. Often occurs in humid conditions and can spread rapidly.",
+        "Geographical Location": "Asia: Widespread in South-East Asia, India, and China. Africa: Found across East, West, and Central Africa. Americas: Prevalent in Central and South America and the Caribbean. Oceania: Present in Pacific Islands and Australia.",
+        "Prevention Measures": "1. Cultural Practices: Maintain wide spacing for air circulation and use drip irrigation. 2. Sanitation: Regularly prune and destroy infected leaves; disinfect tools. 3. Resistant Varieties: Grow FHIA hybrids (FHIA-01, FHIA-17).",
+        "Cure and Treatment": "1. Chemical Management: Apply Mancozeb, Carbendazim, or Propiconazole at first sign of spots. 2. Biological Control: Use Trichoderma viride or Bacillus subtilis. 3. Resistance Management: Rotate systemic and protectant fungicides."
+    },
+    "downey mildew": {
+        "Disease Description": "A fungal disease that causes yellowish-green spots on upper leaf surfaces and a downy, white to grayish-purple growth on the underside. It thrives in cool, moist conditions and can lead to defoliation and reduced fruit quality.",
+        "Geographical Location": "Americas: Native to Northeastern USA, also Canada, Argentina, and Brazil. Europe: Widespread in France, Italy, Germany, Spain. Asia: Highly prevalent in India (Maharashtra, Karnataka, Tamil Nadu) and China. Also in South Africa and Australia.",
+        "Prevention Measures": "1. Cultural Practices: Use proper vine spacing and canopy thinning. 2. Water Management: Use drip irrigation; avoid overhead watering. 3. Sanitation: Destroy infected debris and fallen leaves (oospores). 4. Resistant Varieties: Plant Concord, Niagara, or FHIA hybrids.",
+        "Treatment and Cure": "1. Systemic (Curative): Metalaxyl + Mancozeb (Ridomil Gold) or Fluopicolide + Fosetyl-Al. 2. Contact (Preventive): Bordeaux mixture or Copper Hydroxide. 3. Biological: Bacillus subtilis or Willaertia magna."
+    },
+    "powdery mildew": {
+        "Disease Description": "A fungal disease that appears as a white, powdery coating on leaves, stems, and berries. It thrives in warm, dry climates and can cause leaf curling, reduced photosynthesis, and poor fruit development.",
+        "Geographical Location": "Americas: Native to Eastern US, widespread in California and South America. Europe: Present in France, Italy, Spain, Germany. Asia: Prevalent in India (Nashik, Sangli, Cumbum) and China. Also widespread in Australia and South Africa.",
+        "Prevention Measures": "1. Cultural Practices: Maintain open canopies through selective pruning. 2. Site Selection: Choose sunny, well-ventilated locations. 3. Resistant Varieties: Use Concord, Niagara, Steuben, or Mars. 4. Sanitation: Destroy infected canes and leaves to reduce cleistothecia.",
+        "Cure and Treatment": "1. Standard Chemical: Sulfur dust or wettable powder (best at 25-30°C). 2. Systemic Fungicides: Tebuconazole or Myclobutanil (Rally). 3. Organic: Neem oil or horticultural oils. 4. Home Remedies: Potassium bicarbonate or 40/60 milk-to-water ratio."
+    }
+},
+
+
+
+
+"papaya": {
+    "anthracnose": {
+        "Disease Description": "A fungal disease caused by Colletotrichum gloeosporioides that leads to dark, sunken lesions on fruit, leaves, and stems. It thrives in warm, humid conditions and can cause significant post-harvest losses.",
+        "Geographical Location": "Asia: Significant in India, Thailand, Philippines. Americas: Brazil, Mexico, and Hawaii. Africa: Nigeria, South Africa, Ghana. Oceania: Australia (Queensland) and Pacific Islands.",
+        "Prevention Measures": "1. Field Sanitation: Remove mummy fruits and fallen leaves. 2. Spacing: 2 to 2.5 meters apart for airflow. 3. Harvesting: Avoid bruising fruit. 4. Nutrient Management: Ensure adequate Calcium and Boron to strengthen fruit skin.",
+        "Cure and Treatment": "1. Field Sprays: Mancozeb or Copper Oxychloride during rain; use Carbendazim for active infections. 2. Post-Harvest: Hot water treatment (48°C for 20 mins) to kill latent spores. 3. Organic: 1% Neem oil sprays.",
+        "post_harvest_hot_water_treatment": "Dipping harvested fruit in water at 48°C for 20 minutes is a highly effective organic method to kill latent fungal spores without damaging the fruit."
+    },
+    "bacterial spot": {
+        "Disease Description": "A bacterial disease caused by Xanthomonas campestris pv. caricae that results in small, water-soaked lesions on leaves, stems, and fruit. It thrives in warm, wet conditions and can lead to defoliation and fruit blemishes.",
+        "Geographical Location": "Asia: India (Karnataka, Tamil Nadu), Philippines, Thailand. Americas: Brazil, Mexico, Florida. Africa: Nigeria, South Africa. Oceania: Australia (Queensland).",
+        "Prevention Measures": "1. Seeds: Use disease-free seeds; treat with 10% bleach. 2. Water: Use drip irrigation to keep trunks dry. 3. Windbreaks: Plant barriers to reduce leaf-rubbing wounds. 4. Sanitation: Burn infected materials; do not compost. 5. Tool Hygiene: Clean shears with 70% alcohol between plants.",
+        "Cure and Treatment": "1. Antibiotics: Agricultural-grade Streptomycin (100-200 ppm) where permitted. 2. Bordeaux Mixture: 1% spray to reduce leaf spot spread. 3. Systemic Resistance: Salicylic acid or Potassium phosphite sprays to prime plant immunity."
+    }
+},
+
+"banana": {
+
+"black sigatoka disease":{
+    "Disease Description": "A fungal disease caused by Pseudocercospora fijiensis that leads to dark streaks on leaves, reducing photosynthesis and yield. It thrives in humid, tropical climates and can cause up to 50% yield loss if unmanaged.",
+    "Geographical Location":"Since its discovery in the Sigatoka Valley of Fiji in 1963, it has spread to almost all humid banana-growing regions. Asia & Oceania: Widespread in Fiji, Philippines, Indonesia, Malaysia, Thailand, and Southern China. Americas: Affecting Ecuador, Costa Rica, Colombia, Honduras, and Brazil. Africa: Present in almost all tropical belts, including Nigeria, Ghana, Cameroon, Uganda, and Tanzania. India: Increasingly reported in Kerala, Tamil Nadu, and Karnataka.",
+    "Prevention Measures": "Because the fungus thrives in moisture, management revolves around humidity control. Drainage: Ensure soil is well-drained to avoid standing water. Plant Density: Avoid overcrowding with spacing of at least 2.5m x 2.5m to allow wind to dry leaves. De-leafing: Regularly prune and burn leaves showing dark streaks to reduce spores. Nutrient Balance: High levels of Potassium help thicken cell walls to resist penetration.",
+    "Cure and Treatment": "There is no permanent cure; it requires a continuous management cycle. 1. Chemical Fungicides: Use systemic fungicides like Propiconazole or Tebuconazole to kill the fungus inside the leaf, and contact fungicides like Mancozeb to prevent new spores. 2. Mineral Oil: Mixing fungicides with agricultural spray oil increases effectiveness on waxy leaves. 3. Biological Control: Use Bacillus subtilis or Neem Oil. 4. Resistant Varieties: Plant FHIA hybrids specifically bred for resistance."
+},
+
+
+"bract mosaic virus disease": {
+    "Disease Description": "A viral disease caused by Banana Bract Mosaic Virus (BBrMV) that leads to mosaic patterns on leaves, stunted growth, and malformed fruit. It is transmitted by the banana aphid (Pentalonia nigronervosa) and can cause significant yield losses.",
+    "Geographical Location": "This disease is primarily a concern in South and Southeast Asia. Asia: Common in India (Tamil Nadu, Kerala, Andhra Pradesh, and Karnataka), Philippines, Sri Lanka, and Vietnam. Americas: Reported in parts of Colombia and Brazil. Oceania: Detected in Western Samoa.",
+    "Prevention Measures": "Since this is a virus, prevention is the only solution. 1. Tissue Culture: Use only certified virus-indexed saplings; do not use suckers from old fields. 2. Clean Tools: Disinfect knives/machetes with 10% bleach or flame between plants. 3. Aphid Management: Control Pentalonia nigronervosa vectors by eliminating host weeds like Commelina and using Yellow Sticky Traps. 4. Quarantine: Strictly avoid moving planting material from infected areas.",
+    "Management and Control": "If an infected plant is identified: 1. Eradication: Mark the plant, inject with Glyphosate/kerosene to kill it, and then uproot and burn the entire corm. 2. Vector Spraying: Apply systemic insecticides like Thiamethoxam or Imidacloprid to healthy neighboring plants. 3. Organic: Use 2% Neem Oil as a repellent for aphids."
+},
+
+
+
+"insect pest disease": {
+    "Disease Description": "A collection of insect pests that damage banana plants, including the Banana Weevil, Banana Pseudostem Weevil, Banana Aphid, and Fruit/Leaf Scarring Beetle.",
+    "Geographical Locations": "Banana Weevil (Corm/Rhizome Weevil): Native to Malaysia/Indonesia but spread globally to Central/South America, Africa, India, and Hawaii. Banana Pseudostem Weevil: Major threat in South-East Asia and India. Banana Aphid: Found worldwide; critical as the primary vector for Banana Bunchy Top Virus. Fruit/Leaf Scarring Beetle: Predominant in North/North-Eastern India and Bangladesh.",
+    "Prevention Measures": "1. Clean Planting Material: Use certified pest-free suckers or tissue-cultured plantlets. 2. Sanitation: Burn or chop harvested pseudostems to eliminate weevil breeding sites. 3. Field Hygiene: Remove weeds and volunteer plants that harbor aphids. 4. Physical Protection: Use bunch covers or blue plastic sleeves early to protect fruit from thrips and beetles.",
+    "Cure and Management": "1. Trapping: Use split pseudostem traps or Cosmolure pheromone traps for weevils; use yellow sticky traps for aphids/thrips. 2. Chemical Treatment: Inject systemic insecticides like Imidacloprid into pseudostems for weevils; use Chlorpyriphos or Quinalphos for beetles; use Thiamethoxam for aphids. 3. Biological/Organic: Use Beauveria bassiana fungi to kill weevils, or apply Neem oil to deter egg-laying."
+},
+
+
+"moko disease": {
+        "Disease Description": "A bacterial disease caused by Ralstonia solanacearum that leads to wilting, yellowing, and internal browning of banana plants. It is soil-borne and can spread through water, tools, and infected plant material.",
+    "Geographical Location": "Primarily a threat in the Western Hemisphere, though spread to parts of Asia. The Americas: Extremely destructive in Central and South America (Colombia, Ecuador, Brazil, Honduras, Guatemala, Costa Rica) and the Caribbean. Asia: Significant in the Philippines, reported in Malaysia and Vietnam. India: Similar bacterial wilts affect Kerala, Karnataka, and West Bengal.",
+    "Symptoms": "Affects fruit early. Youngest leaves turn pale/yellow and collapse. Fruit: Inside of green bananas appears prematurely rotten, black, and hard. Stem: Shows brown/black vascular browning; slice in water leaks milky white bacterial ooze. Flower: Male bud may blacken/shrivel from insect-borne bacteria.",
+    "Prevention Measures": "No chemical cure exists. 1. Tool Disinfection: Clean machetes/knives with 10% Bleach or 70% Alcohol between every plant. 2. Bagging Flowers: Cover the heart with plastic bags early to block insects. 3. Removing Male Buds: Use a forked stick to break off the bell after the last fruit hand appears. 4. Clean Suckers: Use only tissue-cultured plants.",
+    "Management": "Follow strict eradication: 1. Quarantine: Mark a 6-meter radius around the infected plant to prevent spread via mud on boots. 2. Killing the Plant: Inject infected plants and suckers with Glyphosate. 3. Soil Treatment: Do not replant bananas for 18-24 months; keep fallow or plant non-host crops like corn. 4. Weed Control: Keep area clear of vegetation that hosts Ralstonia."
+},
+
+"panama disease": {
+    "Disease Description": "A soil-borne fungal disease caused by Fusarium oxysporum f. sp. cubense (Foc) that leads to wilting, yellowing, and eventual death of banana plants. It is one of the most devastating diseases for bananas and can persist in soil for decades.",
+    "Geographical Location": "A global threat moving in waves. First Wave (Race 1): Devastated Central/South America in the early 1900s. The New Wave (TR4): Widespread in Taiwan, Malaysia, Indonesia, China, Philippines, Vietnam. India: Affects Bihar, Uttar Pradesh, Gujarat, and Madhya Pradesh. Americas: Recently confirmed in Colombia (2019) and Peru (2021). Also found in Mozambique, Jordan, Israel, and Oman.",
+    "Symptoms": "Starts at roots and moves up. Yellowing: Oldest leaves turn bright yellow from the edges. Skirt Effect: Yellow leaves collapse at the stalk and hang around the trunk like a skirt. Pseudostem Splitting: Trunk base may split in advanced stages. Vascular Discolouration: Red, brown, or black lines in the trunk cross-section; unlike Moko, there is no milky ooze in water.",
+    "Prevention Measures": "No chemical cure exists; fungus lives in soil for 30-40 years. 1. Biosecurity: Disinfect all vehicles, tools, and boots. 2. Footbaths: Use dip stations with Virkon S at entrances. 3. Certified Tissue Culture: Use only lab-grown plants. 4. Fencing: Keep livestock out to avoid soil movement on hooves.",
+    "Management": "1. Containment: Stop movement and irrigation near the infected area to prevent water-borne spread. 2. In-Situ Killing: Inject plants with Glyphosate to lock fungus inside dying tissue. 3. Soil Solarisation: Cover soil with transparent plastic for months to heat-kill fungus. 4. Rotation: Rotate with Rice or Pineapple to suppress fungus levels. 5. Resistance: Use tolerant varieties like GCTCV-218 or GM varieties like QCAV-4."
+}
+},
+
+
+
+"maize":{
+
+"blight": {
+    "Disease Description": "A fungal disease that causes elongated, water-soaked lesions on leaves, which can coalesce and lead to extensive leaf death. It thrives in humid conditions and can significantly reduce photosynthesis and yield.",
+    "Geographical Location": "Northern Corn Leaf Blight (NCLB): Prefers cool, humid climates; found in US Corn Belt, Brazil, high-altitude Africa, Northern China, and Northern India. Southern Corn Leaf Blight (SCLB): Prefers warm, tropical conditions; found in South-eastern USA, Mexico, West/Central Africa, Southern India, and Southeast Asia.",
+    "Prevention Measures": "1. Resistant Hybrids: The most effective method; select seeds specific to your climate. 2. Crop Rotation: Rotate with non-grass crops like Soybeans or Peanuts for one year to starve the fungus. 3. Tillage: Ploughing under old stalks helps debris decompose. 4. Optimal Planting: Plant early to avoid peak humidity during the crop's vulnerable stages.",
+    "Cure and Treatment": "1. Chemical Management: Apply fungicides at the Tasseling stage (VT). Use Strobilurins (Azoxystrobin) for prevention or Triazoles (Propiconazole) to stop existing infections. 2. Mixed Products: Use combinations like Quilt Xcel for broader protection. 3. Biological Options: Use Trichoderma viride as seed treatment or Bacillus subtilis foliar sprays to suppress fungal growth."
+},
+
+
+"common rust": {
+    "Disease Description": "A fungal disease caused by Puccinia sorghi that produces reddish-brown pustules on leaves, which can reduce photosynthesis and yield. It thrives in warm, humid conditions and can spread rapidly through wind-borne spores.",
+    "Geographical Location": "Found globally but most prevalent in temperate and high-altitude tropical regions. The Americas: US Corn Belt, Canada, Mexico, and high-altitude Colombia/Peru. Africa: Highlands of Kenya, Ethiopia, Tanzania, and South Africa. Asia: Northern China, Himalayan foothills of India/Nepal, and Vietnam. Europe: France, Germany, and Romania.",
+    "Prevention Measures": "1. Resistant Hybrids: Plant hybrids with 'Rp' resistance genes. 2. Early Planting: Reach maturity before peak spore clouds arrive. 3. Managing Alternative Hosts: Remove Wood Sorrel (Oxalis) weeds near fields to break the fungal life cycle. 4. Balanced Nutrition: Avoid excessive Nitrogen; ensure adequate Potassium to strengthen leaf cell walls.",
+    "Cure and Treatment": "1. Systemic Fungicides: Use Pyraclostrobin, Azoxystrobin, or Propiconazole to stop internal infection. 2. Protective Sprays: Use Mancozeb as a shield against new spores. 3. Critical Timing: Apply between V10 (10 leaves) and R1 (silking) stages. Treatment is usually not economical if the rust appears after the dent stage of kernels."
+}
+},
+
+
+
+
+
+"tomato":{
+
+"bacterial spot": {
+    "Disease Description": "A bacterial disease caused by Xanthomonas campestris pv. vesicatoria that leads to small, water-soaked lesions on leaves, stems, and fruit. It thrives in warm, wet conditions and can lead to defoliation and fruit blemishes.",
+    "Geographical Location": "Found globally but most destructive in warm, humid climates. The Americas: Major problem in Southeastern USA, Mexico, Brazil, and Central America. Asia: Prevalent in India (Maharashtra, Karnataka, Himachal Pradesh), Thailand, Vietnam, and China. Africa: Common in Nigeria, South Africa, and Kenya. Europe: Found in Italy, Greece, Spain, and northern greenhouses.",
+    "Prevention Measures": "1. Pathogen-Free Seed: Buy tested seeds as bacteria hide inside. 2. Seed Treatment: Soak seeds in 50°C water for 25 mins or 10% bleach for 1 min. 3. Irrigation: Use drip irrigation to avoid splashing water which spreads bacteria. 4. Crop Rotation: Rotate with non-host crops like corn/beans for 2-3 years. 5. Sanitation: Burn infected plants and debris to prevent overwintering.",
+    "Cure and Treatment": "1. Copper-Based Sprays: Use Copper Hydroxide every 7-10 days. 2. Copper + Mancozeb: Mixing these creates a reaction that is more toxic to bacteria and helps overcome resistance. 3. Antibiotics: Use agricultural Streptomycin sparingly. 4. Biological Controls: Use Bacillus subtilis or Phage treatments as organic alternatives."
+},
+
+"mosaic virus": {
+    "Disease Description": "A viral disease caused by Tomato Mosaic Virus (ToMV) that leads to mottled, distorted leaves and stunted growth. It is highly contagious and can be transmitted through seeds, tools, and human contact.",
+    "Geographical Location": "Found globally in fields and greenhouses. The Americas: Extremely common in USA, Mexico, and Brazil. Asia: Major challenge in India (Maharashtra, Karnataka, Himachal Pradesh), China, and South Korea. Europe: Widespread in Netherlands, Spain, Italy, and Turkey. Africa: Frequently reported in Egypt, Nigeria, and South Africa.",
+    "Symptoms": "Symptoms vary by temperature. Mottling: Leaves show a mosaic pattern of light and dark green patches. Distortion: Leaves may become fern-like, puckered, or narrow ('shoestring' leaves). Stunting: Slow growth and smaller plant size. Fruit Issues: Uneven ripening or brown internal browning (necrosis) making fruit inedible.",
+    "Prevention Measures": "No chemical cure exists. 1. Resistant Varieties: Look for 'ToMV' resistance codes on seed packets. 2. Certified Seed: Buy from reputable sources as the virus carries on the seed coat. 3. Seed Treatment: Soak seeds in 10% Trisodium Phosphate (TSP) or use dry heat (70°C). 4. Hygiene: Wash hands with soap or milk before touching plants (especially for tobacco users). 5. Sterilization: Clean tools with 10% bleach between plants.",
+    "Cure and Management": "The virus is systemic and permanent. 1. Rogueing: Immediately uproot and burn infected plants; do not compost. 2. Isolation: Avoid touching healthy plants after handling sick ones. 3. Milk Sprays: A 20% milk-and-water solution on healthy plants may help prevent entry of virus particles. 4. Soil Management: Rotate away from tomatoes, peppers, or eggplants for at least 2 years."
+},
+
+
+"leaf mold": {
+    "Disease Description": "A fungal disease caused by Passalora fulva that leads to dark, velvety spots on leaves. It thrives in humid conditions and can significantly reduce photosynthesis and yield.",
+    "Geographical Location": "Most common in high humidity areas and greenhouses. Americas: Prevalent in Eastern/Midwestern USA, Canada, Mexico, and Brazil. Europe: Major issue in Netherlands, Belgium, Spain, and Italy. Asia: Widespread in China, Japan, and India (Himachal Pradesh, West Bengal). Africa: Found in Kenya, Ethiopia, and South Africa.",
+    "Symptoms": "Upper Leaf: Pale green or yellowish spots with indefinite margins on older leaves. Lower Leaf: Velvety, olive-green to grayish-purple mold develops under the yellow spots. Advanced Stage: Leaves turn brown, wither, and drop; can infect blossoms and fruit stems in severe cases.",
+    "Prevention Measures": "Focused on moisture management. 1. Air Circulation: Space plants 24-36 inches apart and prune lower suckers. 2. Humidity Control: Keep greenhouse humidity below 85% using fans/venting. 3. Watering: Use drip irrigation early in the morning; keep foliage dry. 4. Resistant Varieties: Look for hybrids with 'Cf' genes. 5. Sanitation: Remove all plant debris and clean stakes/strings at season end.",
+    "Cure and Treatment": "1. Foliar Fungicides: Apply Chlorothalonil (Bravo/Kavach), Mancozeb, or Copper Hydroxide at first sign of spots. 2. Systemic Options: Use Difenoconazole or Cyprodinil for heavy infections. 3. Organic Control: Potassium Bicarbonate or Bacillus subtilis (Serenade) sprays can suppress mold growth by altering leaf surface pH."
+},
+
+"early blight": {
+    "Disease Description": "A fungal disease caused by Alternaria solani that leads to dark, target-like spots on leaves. It thrives in warm, humid conditions and can significantly reduce photosynthesis and yield.",
+    "Geographical Location": "One of the most common tomato diseases globally. The Americas: Widespread across USA, Canada, Mexico, and Brazil. Asia: Extremely common in India (Maharashtra, Karnataka, Uttar Pradesh), China, Pakistan, and Bangladesh. Africa: Major issue in Nigeria, Kenya, Ethiopia, and South Africa. Europe: Found in Italy, France, and Turkey.",
+    "Symptoms": "Target Spots: Dark brown or black spots on older lower leaves with concentric rings resembling a target or thumbprint. Yellowing: Area around spots turns bright yellow, leading to leaf death. Stem Lesions: Dark, sunken spots on the main stem that can cause the plant to snap. Fruit Rot: Leathery, sunken black spots usually starting near the stem.",
+    "Prevention Measures": "1. Crop Rotation: Avoid planting tomatoes, potatoes, or peppers in the same spot for 3 years. 2. Mulching: Cover soil with straw or plastic to prevent fungal spores from splashing onto leaves. 3. Pruning: Remove the bottom 6-10 inches of leaves to improve airflow. 4. Drip Irrigation: Water roots directly to keep foliage dry. 5. Sanitation: Remove and burn the entire plant at season end; do not compost.",
+    "Cure and Treatment": "1. Protective Fungicides: Spray Chlorothalonil or Mancozeb at the first sign of spots to create a shield. 2. Systemic Fungicides: Use Azoxystrobin or Difenoconazole to stop the fungus from inside the plant. 3. Copper Sprays: Use Copper Oxychloride as an organic-friendly suppressant. 4. Organic Options: Use Bacillus subtilis or 1% Neem Oil to slow the spread."
+}
+},
+
+
+
+"rice":{
+
+"Bacterial leaf blight": {
+    "Disease Description": "A bacterial disease caused by Xanthomonas oryzae pv. oryzae that leads to water-soaked streaks on leaves, which can coalesce and cause extensive leaf death. It thrives in humid, tropical conditions and can significantly reduce photosynthesis and yield.",
+    "Geographical Location": "Widespread in regions with heavy monsoon rains and high humidity. Asia: Most affected continent, specifically India (Punjab, Haryana, Bihar, Andhra Pradesh), China, Philippines, Vietnam, Thailand, and Bangladesh. Americas: Southern USA, Mexico, and Colombia. Africa: Nigeria, Mali, Senegal, and Tanzania. Australia: Northern rice-producing areas.",
+    "Symptoms": "Leaf Streak: Water-soaked streaks starting at leaf margins that turn yellow then bleach to dirty white or grey. Bacterial Ooze: Milky-yellow droplets on leaves during humid mornings that dry into amber crusts. Kresek Stage: Young seedlings may wilt, turn greyish-green, and die. Wavy Margins: Yellowing typically has jagged or wavy edges moving down the leaf.",
+    "Prevention Measures": "1. Resistant Varieties: Use varieties with Xa-genes like Improved Samba Mahsuri or IR-64. 2. Balanced Fertilizer: Avoid excessive Nitrogen (Urea) which weakens the plant; use balanced NPK. 3. Water Management: Maintain proper drainage to prevent bacteria traveling through floodwater. 4. Seed Treatment: Soak seeds in Streptocycline solution for 12 hours. 5. Clean Bunds: Remove weeds like Leersia hexandra from field edges.",
+    "Cure and Treatment": "1. Bactericides: Spray Streptocycline mixed with Copper Oxychloride. 2. Potassium Application: Apply Muriate of Potash (MOP) to strengthen cell walls. 3. Field Drainage: Drain the field for 2-3 days to lower humidity and stop bacterial movement. 4. Minimize Contact: Avoid walking through or weeding the field while plants are wet to prevent mechanical spread."
+},
+
+
+
+"Brown spot": {
+    "Disease Description": "A fungal disease caused by Bipolaris oryzae that leads to small, circular brown spots on leaves. It thrives in warm, humid conditions and can cause significant yield losses if left unmanaged.",
+    "Geographical Location": "Widespread in cool, humid climates. Asia: Major issue in Northeast China, Japan, Korea, Thailand, Indonesia, Philippines, Bangladesh, and India (Maharashtra, Tamil Nadu). Americas: Found in USA (Arkansas, California, Florida), Mexico, Brazil, and Argentina. Africa: Recorded in Egypt, Ethiopia, Kenya, and South Africa. Europe: Found in Hungary, France, Italy, and Spain.",
+    "Symptoms": "Initial Stage: Small, water-soaked, dark brown spots on leaves, often with a yellow halo. Advanced Stage: Spots become spindle-shaped or irregular with grey centers; can lead to leaf death. Grain Infection: Can infect panicles, causing dirty panicles or discoloured grains.",
+    "Prevention Measures": "1. Certified Seeds: Use pathogen-free seeds as the bacteria are seed-borne. 2. Seed Treatment: Soak seeds in Pseudomonas fluorescens or hot water (52-54°C) for 10-12 minutes. 3. Sanitation: Remove volunteer plants, debris, and host weeds like Setaria. 4. Nutrient Management: Avoid excessive Nitrogen; ensure adequate Silicon to strengthen the leaf epidermis.",
+    "Cure and Treatment": "1. Chemical Sprays: Apply Streptocycline at the first sign of spots. 2. Copper Bactericides: Use Copper Oxychloride as a protective barrier. 3. Biological Control: Use beneficial bacteria like Pseudomonas fluorescens to suppress pathogens. 4. Systemic Inducers: Treat with Acibenzolar-S-methyl (ASM) to activate the plant's natural immune system."
+},
+
+
+
+"leaf smut": {
+    "Disease Description": "A fungal disease caused by Entyloma oryzae that leads to narrow, water-soaked streaks on leaves. It thrives in humid, tropical climates and can cause significant yield losses if left unmanaged.",
+    "Geographical Location": "Primarily found in tropical and subtropical climates with high humidity. Asia: Widespread in India (southern and eastern states), China, Thailand, Vietnam, Philippines, and Indonesia. Africa: Major threat in West Africa (Nigeria, Mali, Senegal) and Madagascar. Americas: Found in mid-southern USA and parts of South America. Australia: Occurs in northern tropical territories.",
+    "Symptoms": "The Streaks: Narrow, translucent, water-soaked streaks between leaf veins that eventually turn yellowish-orange or brown. Bacterial Beads: Tiny yellow beads of ooze appearing in high humidity that dry into golden sand-like crusts. Smutty Appearance: Heavy infection turns entire leaves brown, giving the field a burnt or dirty appearance.",
+    "Prevention Measures": "1. Certified Seed: Never use seeds from fields showing leaf streaks. 2. Seed Treatment: Soak seeds in Streptocycline solution for 12 hours before sowing. 3. Nitrogen Management: Avoid over-applying Urea to prevent soft leaf tissue. 4. Drainage: Maintain low water levels during peak rain to prevent bacteria from swimming between plants. 5. Clean Tools: Thoroughly wash machinery and tools used in infected fields.",
+    "Cure and Treatment": "1. Antibiotic Spray: Use a mixture of Streptocycline and Copper Oxychloride in water. 2. Potash Application: Apply Muriate of Potash (MOP) to thicken cell walls. 3. Foliar Nutrition: Avoid nitrogen sprays during outbreaks to avoid feeding the bacteria. 4. Biological Control: Use Pseudomonas fluorescens as a soil drench or foliar spray to compete with harmful bacteria."
+}
+
+},
+
+
+
+"coconut":{
+
+"budroot dropping": {
+    "Disease Description": "A fungal disease caused by Phytophthora palmivora that leads to the rotting of the central unopened leaf (spear leaf) and eventually causes the outer leaves to yellow and drop. It thrives in humid, tropical climates with heavy rainfall and can cause significant yield losses if left unmanaged.",
+    "Geographical Location": "Occurs in nearly all coconut-growing regions with high rainfall. Asia: Widespread in India (Kerala, Karnataka, Tamil Nadu, Goa), Philippines, Indonesia, and Sri Lanka. Americas: Prevalent in Brazil, Jamaica, Honduras, and Mexico. Africa: Found in Nigeria, Ghana, Ivory Coast, and Tanzania. Oceania: Common in Pacific Islands and northern Australia.",
+    "Symptoms": "Spear Leaf: The central, unopened leaf turns yellowish-brown, withers, and droops. Pull Test: Early on, the central leaf can be easily pulled out; its base will be soft, slimy, and foul-smelling. Dropping: Outer leaves eventually turn yellow and drop, leaving a 'pencil point' bare trunk appearance.",
+    "Prevention Measures": "1. Field Sanitation: Immediately remove and burn dead palms to eliminate spore sources. 2. Spacing: Space trees 7.5 to 9 meters apart to prevent trapped humidity. 3. Crown Cleaning: Regularly remove dried leaves and debris where water collects. 4. Prophylactic Treatment: Place Bordeaux Mixture or Copper Oxychloride sachets in top leaf axils before monsoon season.",
+    "Cure and Treatment": "1. Surgical Removal: Cut out rotted tissue from the bud area until only healthy white tissue remains. 2. Fungicide Paste: Apply a thick layer of Copper Oxychloride or Bordeaux Paste to the wound. 3. Protection: Cover treated buds with plastic or a pot to keep rain out. 4. Systemic Treatment: Use Root Feeding with Fosetyl-Al for surrounding trees to boost immunity."
+},
+"bud rot": {
+    "Disease Description": "A fungal disease caused by Phytophthora palmivora that leads to the rotting of the central unopened leaf (spear leaf) and eventually causes the outer leaves to yellow and drop. It thrives in humid, tropical climates with heavy rainfall and can cause significant yield losses if left unmanaged.",
+    "Geographical Location": "Found in almost every tropical region with high rainfall or monsoon seasons. Asia: Widespread in India (Kerala, West Bengal), Sri Lanka, Philippines, and Vietnam. Americas: Prevalent in Brazil, Mexico, Jamaica, and Colombia. Africa: Common in Nigeria, Ghana, and Tanzania. Oceania: Found in Pacific Islands and northern Australia.",
+    "Symptoms": "Spear Leaf: Central unopened leaf turns pale yellow or brownish-white while outer leaves stay green. Pull Test: Definitive sign; the central leaf pulls out easily and has a foul-smelling, slimy base. Sunken Crown: As internal rot progresses, the top of the palm collapses and looks flat.",
+    "Prevention Measures": "1. Crown Cleaning: Remove organic debris from the tree top to prevent water trapping. 2. Spacing: Plant 7.5 to 9 meters apart for sunlight and wind drying. 3. Monsoon Protection: Apply Copper Oxychloride sachets in leaf axils before rainy season. 4. Sanitation: Dead trees must be cut down and burned immediately to stop spore spread.",
+    "Cure and Treatment": "1. Surgical Cleaning: Cut away rotted brown tissue until reaching firm, healthy white tissue. 2. Fungicide Application: Apply Bordeaux Paste or Copper Oxychloride to the cleaned area. 3. Waterproofing: Cover the treated bud with plastic or a clay pot. 4. Root Feeding: For nearby healthy trees, use Potassium Phosphonate to boost internal immunity."
+},
+"gray leaf": {
+    "Disease Description": "A fungal disease caused by Pestalotiopsis palmarum that leads to grayish-brown spots on leaves, which can coalesce and cause leaf blight. It thrives in humid, tropical climates and can significantly reduce photosynthesis and yield if left unmanaged.",
+    "Geographical Location": "Common in almost every humid tropical region. Asia: India, Philippines, Sri Lanka, and Malaysia. Americas: Brazil, Mexico, Caribbean, and Florida. Africa: Nigeria, Ghana, Kenya, and Tanzania. Oceania: Papua New Guinea and Pacific Islands.",
+    "Symptoms": "Initial Spots: Tiny yellowish-brown spots on older, lower leaflets. Gray Centers: Spots become oval with ash-grey centers and dark brown/purple borders. Black Dots: Tiny black fruiting bodies appear in the gray centers. Blighting: Spots join together, turning leaflets gray and dry, giving a burnt appearance.",
+    "Prevention Measures": "1. Nutrient Management: Ensure adequate Potassium and Magnesium; apply Muriate of Potash (MOP) regularly. 2. Water Management: Ensure proper drainage to avoid waterlogging. 3. Spacing: Prevent overcrowding to allow wind and sunlight to dry leaves. 4. Sanitation: Prune and burn heavily infected lower leaves; do not leave them on the ground.",
+    "Cure and Treatment": "1. Protective Sprays: Use Copper Oxychloride or Mancozeb on the underside of leaves. 2. Systemic Fungicides: Use Propiconazole or Hexaconazole for severe outbreaks. 3. Root Feeding: For tall trees, place a root in a bag with Carbendazim or Propiconazole solution. 4. Organic Options: Use 1% Neem Oil as a mild antifungal protector."
+}
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
