@@ -89,6 +89,10 @@ The AI model is based on:
 * High accuracy with optimized parameters
 * Lightweight and scalable design
 
+ With an accuracy of ~99% 
+ ![accuracy agi](https://github.com/user-attachments/assets/afb687a3-f5d8-4227-afc8-d9c8304ddbc4)
+
+
 EfficientNet enables:
 
 * Better feature extraction
